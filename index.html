@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor emails</title>
+</head>
+<body>
+    <h1>Envio de Emails</h1>
+    <!--Formulário de envio de emails usando metódo post para o endpoint, 
+    definindo que o enctype envio os arquivos anexados corrtamente para o servidor-->
+    <form action="/sendemails" method="POST" enctype="multipart/form-data">
+        <label for="to">Destinatário(s):</label>
+        <input type="text" id="to" name="to" placeholder="email1@example.com, email2@example.com" required>
+        <br><br>
+
+        <label for="subject">Assunto(Titulo):</label>
+        <input type="text" id="subject" name="subject" placeholder="Digite o assunto" required>
+        <br><br>
+
+        <label for="text">Mensagem:</label>
+        <textarea id="text" name="text" placeholder="Digite sua mensagem" required></textarea>
+        <br><br>
+
+        <label for="file">Anexo (PDF):</label>
+        <input type="file" id="file" name="file" accept="application/pdf">
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
